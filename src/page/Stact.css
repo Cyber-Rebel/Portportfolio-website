@@ -1,0 +1,35 @@
+.marquee {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 50px; /* Adjust as needed */
+    gap: 4rem;
+    background: linear-gradient(to right, rgb(44, 43, 43), rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 80%, rgb(49, 49, 49));
+    /* mask-image: linear-gradient(to right, transparent, white 20%, white 80%, transparent); */
+}
+.marquee::after{
+    content: '';
+    width: 0%;
+}
+.text {
+    display: flex;
+    gap: 4rem;
+    padding: 0 14%;
+    animation: marquee 10s linear infinite both;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+    150%{
+        transform: translateX(0);
+    }
+    200%{
+        transform: translateX(-100%);
+    }
+}
