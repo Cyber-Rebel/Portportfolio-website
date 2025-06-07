@@ -1,8 +1,13 @@
 import React from 'react'
+import Maintainrouts from './routes/Maintainrouts'
 
 const App = () => {
   return (
-    <div>App</div>
+    <div className='w-full'>
+    
+<Maintainrouts/>
+
+    </div>
   )
 }
 
