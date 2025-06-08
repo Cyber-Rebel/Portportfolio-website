@@ -1,9 +1,10 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+
 const Navbar = () => {
   return (
-    <div className='flex gap-9 items-center justify-center p-4' >
+    <div className='flex gap-9 items-center  justify-center pt-10 absolute left-[36%]' >
     
 
     <NavLink to="/" className={({isActive})=>`${isActive?"text-orange-600":"text-white"} font-opensans font-bold text-xl`}>Home</NavLink>
