@@ -1,7 +1,7 @@
 
 import { Route, Routes } from 'react-router-dom'
 import Home from "../page/Home.jsx"
-import About from '../page/About.jsx'
+import About from '../ab/About.jsx'
 import Resume from '../page/Resume.jsx'
 import Works from "../page/Works.jsx"
 import Contact from '../page/Contact.jsx'
