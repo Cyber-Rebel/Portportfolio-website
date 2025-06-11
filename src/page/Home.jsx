@@ -4,6 +4,7 @@ import ParticlesBg from 'particles-bg'
 import Navbar from './Navbar'
 import About from './About'
 import Resume from './Resume'
+import Work from './Works.jsx'
 
 
 const Home = () => {
@@ -25,6 +26,7 @@ const Home = () => {
         <ParticlesBg type="circle" bg={true} />
         <About/>
         <Resume/>
+        <Work/>
     </div>
   )
 }

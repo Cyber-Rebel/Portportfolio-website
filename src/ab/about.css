@@ -1,27 +1,7 @@
-/* .about_anima_text {
-  display: inline-block;
-  animation: textanimate 3s cubic-bezier(0.65, 0, 0.35, 1) infinite;
-  overflow-x: hidden;
-}
 
-@keyframes textanimate {
-  0% {
-    transform: translateX(0%) ;
-    opacity: 0.3;
-  }
-  50% {
-    transform: translateX(2%) ;
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0%) ;
-    opacity: 0.3;
-  }
-} */
- 
 .about_anima_text_rev {
       display: inline-block;
-        /* overflow-x: hidden; */
+      
   position: relative;
   max-width: 100%;
 
