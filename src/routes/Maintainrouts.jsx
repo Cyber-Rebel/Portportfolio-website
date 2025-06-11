@@ -14,6 +14,7 @@ const Maintainrouts = () => {
         <Route path='/resume' element={<Resume/>} />
           <Route path='/works' element={<Works/>}/>
             <Route path='/contact' element={<Contact/>}/>
+            {/* <Route path='/contact' element={<} */}
       
     </Routes>
   )

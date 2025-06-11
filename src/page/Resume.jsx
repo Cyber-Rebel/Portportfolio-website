@@ -44,7 +44,7 @@ const arr = [
 // const [width,setwidth
 // ]= useState('6')--> workign
   return (
-    <div className='bg-white  grid grid-flow-col grid-rows-2  gap-4" h-[] w-full ' >
+    <div className='bg-white   grid grid-flow-col grid-rows-2  gap-4" h-[] w-full ' >
 
       {arr.map((val,index)=>{
         console.log(val)
@@ -52,7 +52,7 @@ const arr = [
           <div  key={index} className='w-full p-20'>
             <img className='h-40 '  key={index} src={val.image} alt="" />
             <div className='w-full h-[30%] text-center rounded bg-cyan-400 mt-3'> 
-              <div className={`bg-green-400  w-${val.width} h-full text-center`}></div>
+              <div className={`bg-green-400  w-${val.width?val.width:'8'} h-full text-center`}></div>
               
             </div>
           </div>
