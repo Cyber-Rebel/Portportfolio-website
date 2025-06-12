@@ -25,7 +25,7 @@ const About = () => {
       {
         y: '0%',
         opacity: 1,
-        duration: 2,
+        duration: 20,
         ease: 'cubic-bezier(0.65, 0, 0.35, 1)',
         scrollTrigger: {
           trigger: revTextRef.current,
@@ -47,7 +47,7 @@ const About = () => {
       {
         x: '0%',
         opacity: 1,
-        duration: 4,
+        duration: 20,
         ease: 'cubic-bezier(0.65, 0, 0.35, 1)',
         scrollTrigger: {
           trigger: revTextRef.current,
@@ -70,12 +70,12 @@ const About = () => {
 
   return (
     <div className="bg-[#1E2125] pt-[6%] text-white min-h-screen px-4 sm:px-8">
-      {/* Animated Text Section */}
+    
       <div>
         <div
           ref={textup}
           style={textcss}
-          className="text-[#E9DFCE] text-center sm:text-left text-[clamp(2.5rem,12vw,8rem)] font-bold leading-tight"
+          className="text-[#E9DFCE] ml-6  text-center sm:text-left text-[clamp(2.5rem,12vw,8rem)] font-bold leading-tight"
         >
           I Can Debug <br />
           Code
@@ -91,13 +91,13 @@ const About = () => {
         <div
           ref={revTextRef}
           style={textcss}
-          className="text-[#E9DFCE] text-end font-[Grandslang,sans-serif] text-[clamp(2.5rem,12vw,8rem)] font-bold"
+          className="text-[#E9DFCE]  text-center font-[Grandslang,sans-serif] text-[clamp(2.5rem,12vw,8rem)] font-bold md:text-end"
         >
           Build Cool Things.
         </div>
       </div>
 
-      {/* About & Contact Section */}
+    
       <div className="pt-[9%] w-full text-white">
         <div className="max-w-5xl mx-auto space-y-10">
           <section>
