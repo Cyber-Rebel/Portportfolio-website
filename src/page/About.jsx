@@ -69,7 +69,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="bg-[#1E2125] pt-[6%] text-white min-h-screen px-4 sm:px-8">
+    <div className="bg-[#1E2125] pt-[6%] pb-24 text-white min-h-screen px-4 sm:px-8">
     
       <div>
         <div
@@ -99,12 +99,12 @@ const About = () => {
 
     
       <div className="pt-[9%] w-full text-white">
-        <div className="max-w-5xl mx-auto space-y-10">
+        <div className="  mx-12 max-w-5xl md:mx-auto space-y-10">
           <section>
-            <h1 className="text-3xl font-extrabold border-blue-500 pb-2 mb-4">
+            <h1 className="text-3xl font-extrabold border-blue-500   md:pb-2 mb-4">
               About Me
             </h1>
-            <p className="text-lg leading-relaxed text-gray-300">
+            <p className=" text-lg leading-relaxed text-gray-300">
               I am a third-year B.Tech student with strong technical skills in the MERN Stack <br />
               and a solid grasp of the Linux OS. I have a keen interest in designing and developing
               <br /> applications that solve real-world problems.
@@ -130,7 +130,7 @@ const About = () => {
               </ul>
             </div>
 
-            <div className="flex justify-center sm:justify-end">
+            <div className="flex justify-center items-center  sm:justify-end  ">
               <Link
                 to="https://drive.google.com/file/d/1TppvuoogheptDQMECjO9tRX3LjgtUZgs/view?usp=sharing"
                 className="p-4 flex items-center gap-3 text-lg font-bold bg-[#444444] rounded-md hover:bg-[#555] transition"

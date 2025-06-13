@@ -5,7 +5,10 @@ import About from './About';
 import Resume from './Resume';
 import Work from './Works.jsx';
 import Contact from './Contact.jsx';
+// import { FaSquareGithub } from "react-icons/fa6
+import { IoLogoGithub } from "react-icons/io5";
 
+import { FaLinkedin } from "react-icons/fa";
 const Home = () => {
   return (<>
     <div className="w-full  text-white bg-black relative z-0 overflow-x-hidden">
@@ -22,6 +25,14 @@ const Home = () => {
           using <span className="text-pink-600 font-bold">MERN STACK</span>. This is my portfolio website showcasing my
           development process <br className="hidden sm:inline" /> and featured projects.
         </p>
+<div className='flex gap-12 pt-10'>
+
+        <a  href="https://github.com/Cyber-Rebel" 
+    target="_blank" className='bg-slate-700 pt-3 pb-3 pl-12 pr-12 flex items-center justify-center gap-2'><IoLogoGithub />Github</a>
+        <a  href="https://www.linkedin.com/in/nilesh-patil-451637322/" 
+    target="_blank"  className='bg-[#0063C2] pt-3 pb-3 pl-12 pr-12 flex items-center justify-center gap-2'  ><FaLinkedin />Linkdin</a>
+
+</div>
       </div>
 
       <ParticlesBg type="circle" bg={true} />
