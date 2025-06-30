@@ -2,8 +2,8 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <div className="bg-gray-900 min-h-screen w-full flex items-center justify-center p-4">
-      <div className="bg-gray-800 p-8 rounded-2xl shadow-lg max-w-md w-full text-white">
+    <div className="bg-gray-800 min-h-screen  z-10 w-full flex items-center justify-center p-4">
+      <div className="bg-gray-900 p-8  shadow-slate-800 shadow-2xl  max-w-md w-full -z-2 text-white">
         <div className="flex justify-center mb-6">
           <img
             src="https://cdn-icons-png.flaticon.com/128/13001/13001956.png"

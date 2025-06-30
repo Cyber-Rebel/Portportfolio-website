@@ -16,13 +16,13 @@ const arr = [
   {
     name: 'JavaScript',
     image: 'https://miro.medium.com/v2/resize:fit:500/1*tOI6UC5EaS2fPItCesI-AQ.png',
-     width:'6'
+     width:'61'
   },
 
   {
     name: 'GitHub',
     image: 'https://rijsat.com/wp-content/uploads/2021/07/github.png',
-     width:'6'
+     width:'16'
   },
   {
     name: 'Node.js',
@@ -40,9 +40,7 @@ const arr = [
      width:'6'
   },
 ];
-// let width = 6--> Not working
-// const [width,setwidth
-// ]= useState('6')--> workign
+
   return (
     <div className='bg-white   grid grid-flow-col grid-rows-2  gap-4" h-[] w-full ' >
 
@@ -51,8 +49,8 @@ const arr = [
         return(
           <div  key={index} className='w-full p-20'>
             <img className='h-40 '  key={index} src={val.image} alt="" />
-            <div className='w-full h-[30%] text-center rounded bg-cyan-400 mt-3'> 
-              <div className={`bg-green-400  w-${val.width?val.width:'8'} h-full text-center`}></div>
+            <div  className='w-full h-[30%] text-center rounded bg-cyan-400 mt-3'> 
+              <div style={{width:`${val.width}%`}} className={`bg-green-400  h-full text-center`}></div>
               
             </div>
           </div>

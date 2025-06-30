@@ -69,7 +69,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="bg-[#1E2125] pt-[6%] pb-24 text-white min-h-screen px-4 sm:px-8">
+    <div className="bg-[#1E2125] h-100vh pt-[6%] pb-24 text-white min-h-screen px-4 sm:px-8">
     
       <div>
         <div
@@ -77,7 +77,7 @@ const About = () => {
           style={textcss}
           className="text-[#E9DFCE] ml-6  text-center sm:text-left text-[clamp(2.5rem,12vw,8rem)] font-bold leading-tight"
         >
-          I Can Debug <br />
+          I Can Debug 
           Code
         </div>
 

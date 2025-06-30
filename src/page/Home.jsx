@@ -1,11 +1,5 @@
 import React from 'react';
 import ParticlesBg from 'particles-bg';
-import Navbar from './Navbar';
-import About from './About';
-import Resume from './Resume';
-import Work from './Works.jsx';
-import Contact from './Contact.jsx';
-// import { FaSquareGithub } from "react-icons/fa6
 import { IoLogoGithub } from "react-icons/io5";
 
 import { FaLinkedin } from "react-icons/fa";
@@ -14,7 +8,6 @@ const Home = () => {
     <div className="w-full  text-white bg-black relative z-0 overflow-x-hidden">
 
 
-      <Navbar   />
       
       <div className="min-h-[90vh] flex flex-col justify-center items-center text-white px-4 sm:px-8 md:px-16 text-center">
         <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black mb-4 font-mono">
@@ -37,10 +30,7 @@ const Home = () => {
 
       <ParticlesBg type="circle" bg={true} />
 
-      <About />
-      <Resume />
-      <Work />
-      <Contact />
+  
     </div>
     </>
   );

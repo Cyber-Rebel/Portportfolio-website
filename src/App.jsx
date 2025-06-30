@@ -1,14 +1,30 @@
-import React from 'react'
-import Maintainrouts from './routes/Maintainrouts'
-import Navbar from './page/Navbar'
+import { ReactLenis } from 'lenis/react'
+import { useEffect, useRef } from 'react'
 
+import Apps from './Workablespace/App'
 const App = () => {
-  return (
-    <div className='w-full'>
-    
-<Maintainrouts/>
+  
+  const lenisRef = useRef()
+  
+  useEffect(() => {
+    function update(time) {
+      lenisRef.current?.lenis?.raf(time)
+    }
+  
+    const rafId = requestAnimationFrame(update)
+  
+    return () => cancelAnimationFrame(rafId)
+  }, [])
 
-    </div>
+
+
+
+
+  return (
+<div>
+  <ReactLenis root />
+  <Apps/>
+</div>
   )
 }
 
