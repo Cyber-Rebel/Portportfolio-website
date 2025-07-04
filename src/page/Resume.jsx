@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 
+
 const Resume = () => {
 
 const arr = [
@@ -42,7 +43,7 @@ const arr = [
 ];
 
   return (
-    <div className='bg-white   grid grid-flow-col grid-rows-2  gap-4" h-[] w-full ' >
+    <div className='bg-zinc-700 grid grid-flow-col grid-rows-2  gap-4" h-[] w-full ' >
 
       {arr.map((val,index)=>{
         console.log(val)

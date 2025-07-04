@@ -21,9 +21,9 @@ const Home = () => {
 <div className='flex gap-12 pt-10'>
 
         <a  href="https://github.com/Cyber-Rebel" 
-    target="_blank" className='bg-slate-700 pt-3 pb-3 pl-12 pr-12 flex items-center justify-center gap-2'><IoLogoGithub />Github</a>
+    target="_blank" className='bg-slate-700 pt-5 pb-5 rounded pl-12 pr-12 flex items-center justify-center gap-2'><IoLogoGithub />Github</a>
         <a  href="https://www.linkedin.com/in/nilesh-patil-451637322/" 
-    target="_blank"  className='bg-[#0063C2] pt-3 pb-3 pl-12 pr-12 flex items-center justify-center gap-2'  ><FaLinkedin />Linkdin</a>
+    target="_blank"  className='bg-[#0063C2] pt-5 pb-5 rounded pl-12 pr-12 flex items-center justify-center gap-2'  ><FaLinkedin />Linkdin</a>
 
 </div>
       </div>

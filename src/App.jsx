@@ -4,17 +4,17 @@ import { useEffect, useRef } from 'react'
 import Apps from './Workablespace/App'
 const App = () => {
   
-  const lenisRef = useRef()
+  // const lenisRef = useRef()
   
-  useEffect(() => {
-    function update(time) {
-      lenisRef.current?.lenis?.raf(time)
-    }
+  // useEffect(() => {
+  //   function update(time) {
+  //     lenisRef.current?.lenis?.raf(time)
+  //   }
   
-    const rafId = requestAnimationFrame(update)
+  //   const rafId = requestAnimationFrame(update)
   
-    return () => cancelAnimationFrame(rafId)
-  }, [])
+  //   return () => cancelAnimationFrame(rafId)
+  // }, [])
 
 
 

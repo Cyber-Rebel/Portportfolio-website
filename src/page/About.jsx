@@ -31,7 +31,7 @@ const About = () => {
           trigger: revTextRef.current,
           start: 'top 98%',
           end: 'bottom 60%',
-          scrub: true,
+          scrub: 2,
         },
       }
     );
@@ -49,21 +49,16 @@ const About = () => {
         opacity: 1,
         duration: 20,
         ease: 'cubic-bezier(0.65, 0, 0.35, 1)',
-        scrollTrigger: {
-          trigger: revTextRef.current,
-          start: 'top 90%',
-          end: 'bottom 80%',
-          toggleActions: 'play none none reverse',
-          scrub: true,
+        scrollTrigger: { // jab bhi show hoga tab run hoga bydafult run nahi hoga  agar aapne scrollTrigner : '.c' (suppose classname) lik diya to  aapne ek mast kam hoga ki aap scrolle jab div show hoga tab run hoga
+          trigger: revTextRef.current, // konsa eleme kena hae .class # id esa kuch hamesha rahta hae 
+          start: 'top 90%',// 
+          end: 'bottom 80%', // 
+          toggleActions: 'play none none reverse', // toggle Action me some  keywordsa hote hae Play pause resume reverse restart complet none
+          // toggle action 4 position hote hae use ham wo keyword use karte hae 
+          scrub: 2, 
+          // lovelye hae bhaii ye to
         },
-        onUpdate: function () {
-          const progress = this.progress();
-          if (progress < 0.5) {
-            gsap.to(revTextRef.current, { opacity: 0.3 + progress * 1.4 });
-          } else {
-            gsap.to(revTextRef.current, { opacity: 2 - progress * 1 });
-          }
-        },
+      
       }
     );
   }, []);
@@ -75,7 +70,8 @@ const About = () => {
         <div
           ref={textup}
           style={textcss}
-          className="text-[#E9DFCE] ml-6  text-center sm:text-left text-[clamp(2.5rem,12vw,8rem)] font-bold leading-tight"
+          id='uppertext'
+          className="uppertext text-[#E9DFCE] ml-6  text-center sm:text-left text-[clamp(2.5rem,12vw,8rem)] font-bold leading-tight"
         >
           I Can Debug 
           Code
