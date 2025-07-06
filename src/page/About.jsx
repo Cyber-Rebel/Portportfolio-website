@@ -25,13 +25,13 @@ const About = () => {
       {
         y: '0%',
         opacity: 1,
-        duration: 20,
+        duration: 8,
         ease: 'cubic-bezier(0.65, 0, 0.35, 1)',
         scrollTrigger: {
           trigger: revTextRef.current,
           start: 'top 98%',
           end: 'bottom 60%',
-          scrub: 2,
+          scrub: 1,
         },
       }
     );
@@ -47,7 +47,7 @@ const About = () => {
       {
         x: '0%',
         opacity: 1,
-        duration: 20,
+        duration: 8,
         ease: 'cubic-bezier(0.65, 0, 0.35, 1)',
         scrollTrigger: { // jab bhi show hoga tab run hoga bydafult run nahi hoga  agar aapne scrollTrigner : '.c' (suppose classname) lik diya to  aapne ek mast kam hoga ki aap scrolle jab div show hoga tab run hoga
           trigger: revTextRef.current, // konsa eleme kena hae .class # id esa kuch hamesha rahta hae 
@@ -55,7 +55,7 @@ const About = () => {
           end: 'bottom 80%', // 
           toggleActions: 'play none none reverse', // toggle Action me some  keywordsa hote hae Play pause resume reverse restart complet none
           // toggle action 4 position hote hae use ham wo keyword use karte hae 
-          scrub: 2, 
+          scrub: 1, 
           // lovelye hae bhaii ye to
         },
       

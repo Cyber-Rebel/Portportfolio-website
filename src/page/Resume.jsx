@@ -46,7 +46,6 @@ const arr = [
     <div className='bg-zinc-700 grid grid-flow-col grid-rows-2  gap-4" h-[] w-full ' >
 
       {arr.map((val,index)=>{
-        console.log(val)
         return(
           <div  key={index} className='w-full p-20'>
             <img className='h-40 '  key={index} src={val.image} alt="" />
