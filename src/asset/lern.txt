@@ -1,0 +1,138 @@
+// --This information code 
+// const lenisRef = useRef()
+// Bilkul bhai! Ab tu sun — spy ka kaam react-scroll mein section ka tracking karna hota hai. Ye automatically detect karta hai ki abhi kaunsa section screen pe dikh raha hai, aur fir uss hisaab se link ko active bana deta hai.
+  
+  // useEffect(() => {
+  //   function update(time) {
+  //     lenisRef.current?.lenis?.raf(time)
+  //   }
+  
+  //   const rafId = requestAnimationFrame(update)
+  
+  //   return () => cancelAnimationFrame(rafId)
+  // }, [])
+
+// import React, { useState } from 'react'
+
+// const App = () => {
+//   const [konsclick, setkonclick] = useState('LUN')  
+
+//   const getColor = (label) => (konsclick === label ? 'green' : 'white')
+
+//   return (
+//     <div className='flex gap-6 text-white'>  
+//       <button
+//         onClick={() => setkonclick('LUN')}
+//         style={{ color: getColor('LUN') }}
+//         className='bg-slate-800 px-4 py-2 rounded'
+//       >
+//         Lun
+//       </button>
+
+//       <button
+//         onClick={() => setkonclick('suc')}
+//         style={{ color: getColor('suc') }}
+//         className='bg-slate-800 px-4 py-2 rounded'
+//       >
+//         Suc
+//       </button>
+
+//       <button
+//         onClick={() => setkonclick('fuc')}
+//         style={{ color: getColor('fuc') }}
+//         className='bg-slate-800 px-4 py-2 rounded'
+//       >
+//         Fuc
+//       </button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+// import React, { useEffect, useState } from 'react';
+// import { Link, Element,Events ,scrollSpy } from 'react-scroll';
+
+// function App() {
+//   const [color,setcolor] = useState('')
+  
+// useEffect(() => {
+    
+//     Events.scrollEvent.register('begin', (to, element) => { // ye work hota hae jab secition ek link jab aap button ko press karte ho
+//       // console.log('begin', to, element);
+//     });
+
+//     Events.scrollEvent.register('end', (to, element) => {
+//       // console.log('end', to, element);
+//     });
+ 
+//     scrollSpy.update();    // scroller par spy karta hae spy imfromatin hota scroller me 
+
+//     return () => {
+//       Events.scrollEvent.remove('begin');
+//       Events.scrollEvent.remove('end');
+//     };
+//   }, []);
+  
+//   const handleSetActive=(to)=>{
+//     console.log(to)
+//     if(to==='section1'){
+//       setcolor('red-900')
+//     }else
+//      if(to==='section2'){
+//       setcolor('blue-500')
+//     }
+    
+//   }
+//   // console.log(color)
+//   return (
+//     <div>
+//       <nav >
+//         <ul className={`flex w-full items-center justify-center bg-${color}  fixed gap-2.5 `}>
+//           <li>
+//             <Link to="section1" smooth={true} duration={500}  spy={true}    activeClass={`text-orange-700`}   onSetActive={handleSetActive} >Section 1</Link>
+//           </li>
+//           <li>
+//             <Link to="section2" smooth={true} duration={500} spy={true}    activeClass={`text-orange-700`}   onSetActive={handleSetActive} >Section 2</Link>
+//           </li>
+//            <li>
+//             <Link to="section3" smooth={true} duration={500}  spy={true}   activeClass={`text-orange-900`}   onSetActive={handleSetActive} >Section 3</Link>
+//           </li>
+//            <li>
+//             <Link to="section4" smooth={true} duration={500} spy={true}    activeClass={`text-orange-900`}   onSetActive={handleSetActive} >Section 4</Link> 
+//           </li>
+//           {/*spy={true } tabi activeclass onsetActive work hota hae  Activeclass me app css likte ho  onsetActive apko ek value to postion jab page scroller pto ha e 
+// //offset control karta hai kitna upar ya neeche scroll karega jab koi section pe scroll ho raha ho.
+// // ✅ offset={-70} Kaam Kaise Karta Hai?  */}
+//         </ul>
+//       </nav>
+//       <Element name="section1">
+//         <section style={{ height: '100vh', backgroundColor: 'lightblue' }}>
+//           <h1>Section 1</h1>
+//           <p>This is the content of section 1</p>
+//         </section>
+//       </Element>
+//       <Element name="section2">
+//         <section style={{ height: '100vh', backgroundColor: 'lightgreen' }}>
+//           <h1>Section 2</h1>
+//           <p>This is the content of section 2</p>
+//         </section>
+//       </Element>
+//         <Element name="section3">
+//         <section style={{ height: '100vh', backgroundColor: 'red' }}>
+//           <h1>Section 3</h1>
+//           <p>This is the content of section 3</p>
+//         </section>
+//       </Element> 
+//        <Element name="section4">
+//         <section style={{ height: '100vh', backgroundColor: 'yellow' }}>
+//           <h1>Section 4</h1>
+//           <p>This is the content of section 4</p>
+//         </section>
+//       </Element>
+//       {/* Add more sections with Element components as needed */}
+//     </div>
+//   );
+// }
+
+// export default App; 
