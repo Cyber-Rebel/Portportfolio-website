@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Works = () => {
   return (
- <div className="w-full bg-gray-700 py-10 px-4">
+ <div className="w-full bg-[#eee8df] py-10 px-4">
   <h2 className="text-2xl sm:text-3xl font-semibold text-white text-center mb-8">
     Check Out Some of My Works
   </h2>

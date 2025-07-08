@@ -94,7 +94,7 @@ const Resume = () => {
         }
       `}</style>
 
-      <div className="bg-[#b6aea2] min-h-screen w-full p-4">
+      <div className="bg-[#e7dbc9] min-h-screen w-full p-4">
         {/* Header */}
         <div className="w-full flex justify-center items-center text-center mb-10">
           <h1

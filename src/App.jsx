@@ -25,14 +25,14 @@ import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy }from
 
   }
   const run  = ()=>{
-    setcolor('#444444')
+    setcolor('#252525')
   }
   console.log(hide)
    
       return (
           <div className='w-full relative'>
             <div>
-        <div style={{backgroundColor:`${color}`,opacity:`${hide}`}} className={` fixed top-0 left-0 hidden   z-30 md:flex text-white  w-full  h-fit py-3  bg-transparent justify-center items-center gap-10 `}>
+        <div style={{backgroundColor:`${color}`,opacity:`${hide}`}} className={` fixed top-0 left-0 hidden z-30 md:flex text-white  w-full  h-fit py-3  bg-transparent justify-center items-center gap-10 `}>
  
   <Link to="Home"   className='font-opensans cursor-pointer text-2xl     font-bold '  spy={true}     activeClass="text-orange-700"   onSetActive={handle}    smooth={true} duration={500} > Home</Link>
   {/* // kabhi kabhi style or className me ek property same property activeClass mat dena jiske agar tumnedi pahle className ke propery chalgi */}
@@ -40,7 +40,7 @@ import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy }from
       <Link  to="about" className='font-opensans cursor-pointer font-bold text-xl' spy={true}    activeClass="text-orange-700"     onSetActive={run} offset={2} smooth={true} duration={500}     >ABOUT</Link>
       <Link  to="Resume" className=' font-opensans cursor-pointer font-bold text-xl' spy={true}    activeClass="text-orange-700"     smooth={true} duration={500}   >RESUME</Link>
       <Link to="works" className=' font-opensans cursor-pointer font-bold text-xl' spy={true}    activeClass="text-orange-700"    smooth={true} duration={500}     >WORKS</Link>
-      <Link to="contact" className=' font-opensans cursor-pointer font-bold text-xl' spy={true}    activeClass="text-orange-700"     smooth={true} duration={500}     >Contact</Link>
+      <Link to="contact" className=' font-opensans  cursor-pointer font-bold text-xl' spy={true}    activeClass="text-orange-700"     smooth={true} duration={500}     >Contact</Link>
       </div>
         <Element name="Home">
           <Home/>
