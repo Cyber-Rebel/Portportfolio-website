@@ -101,7 +101,7 @@ const Resume = () => {
             className="text-transparent font-bold font-serif text-9xl"
             style={{
               backgroundImage:
-                "url('https://png.pngtree.com/thumb_back/fh260/background/20201028/pngtree-abstract-technology-background-technical-electric-image_443494.jpg')",
+                "url('https://t3.ftcdn.net/jpg/02/76/44/92/360_F_276449235_z71XmvtwDHfqxNt6UCK5yl4mAplD3cds.jpg')",
               backgroundSize: '400%',
               backgroundPosition: '0 50%',
               backgroundClip: 'text',
