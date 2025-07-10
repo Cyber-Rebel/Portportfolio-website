@@ -1,12 +1,9 @@
 import { useEffect, useState } from 'react';
 import image from '../asset/image.png';
 import glow from '../asset/glow.png';
-import bg from '../asset/bg.mp4';
 import { motion, resize } from "motion/react"
-import ReactDOM from 'react-dom'
 import { SocialIcon } from 'react-social-icons'
 const Home = () => {
-  const [video, showVideo] = useState(true);
 
   const [show,setshow] = useState(glow)
   useEffect(() => {
