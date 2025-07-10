@@ -1,39 +1,114 @@
-import React from 'react';
-import ParticlesBg from 'particles-bg';
-import { IoLogoGithub } from "react-icons/io5";
+import { useEffect, useState } from 'react';
+import image from '../asset/image.png';
+import glow from '../asset/glow.png';
+import bg from '../asset/bg.mp4'
 
-import { FaLinkedin } from "react-icons/fa";
 const Home = () => {
-  return (<>
-    <div className="w-full  text-white bg-black relative z-0 overflow-x-hidden">
+  const [video, showvideo] = useState(true)
+  useEffect(() => {
+    // Optional: Any side effects
+    const timer = setTimeout(()=>{
+        showvideo(false)
+    },2000)
 
-
-      
-      <div className="min-h-[100vh] flex flex-col justify-center items-center text-white px-4 sm:px-8 md:px-16 text-center">
-        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black mb-4 font-mono">
-          Hey There, I am Nilesh
-        </h1>
-        <p className="text-base sm:text-lg lg:text-xl font-serif leading-relaxed max-w-3xl">
-          I am a passionate Web Development Engineer, skilled in building modern web applications <br className="hidden sm:inline" />
-          using <span className="text-pink-600 font-bold">MERN STACK</span>. This is my portfolio website showcasing my
-          development process <br className="hidden sm:inline" /> and featured projects.
-        </p>
-<div className='flex gap-12 pt-10'>
-
-        <a  href="https://github.com/Cyber-Rebel" 
-    target="_blank" className='bg-slate-700 pt-5 pb-5 rounded pl-12 pr-12 flex items-center justify-center gap-2'><IoLogoGithub />Github</a>
-        <a  href="https://www.linkedin.com/in/nilesh-patil-451637322/" 
-    target="_blank"  className='bg-[#0063C2] pt-5 pb-5 rounded pl-12 pr-12 flex items-center justify-center gap-2'  ><FaLinkedin />Linkdin</a>
-
-</div>
-      </div>
-
-      <ParticlesBg type="circle" bg={true} />
-
+    return ()=>clearInterval(timer)
   
+  }, []);
+
+if(video){
+
+return(
+  <div className='w-full h-screen '>
+     <video
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          src={bg}
+          autoPlay
+          muted
+          playsInline
+        />
+        </div>
+)
+
+}else{
+
+  return (
+    <>
+ 
+
+
+    <div className="w-full h-screen bg-[#090A0B] flex flex-col md:flex-row items-center gap-11 justify-between px-6 md:px-40 py-20 md:py-40 overflow-hidden">
+      
+     <div
+  className="relative h-full w-[80%] flex bg-[#090A0B]  items-center z-10 p-6 rounded-xl justify-end"
+  style={{
+    backgroundImage: `url(${glow})`,
+    backgroundPosition: "center",
+    // backgroundSize: "cover",
+    // backgroundRepeat: "no-repeat"
+  }}
+>
+  <div>
+    <p className="text-green-400">Hi there, I’m</p>
+    <h1 className="text-5xl text-white font-bold">Nilesh Ramlal Patil</h1>
+    <h2 className="text-2xl font-light text-white">Developer + Designer</h2>
+    <p className="text-gray-400  mt-4">
+      I’m a full-stack engineer with experience in design and development of user-centered web and mobile applications. <br />
+      I am also focusing on mastering UI/UX design. Currently, I’m working on building cloud solutions at <span className="text-green-400">Lorem</span>.
+    </p>
+  </div>
+</div>
+
+
+      <img className="w-full md:w-[40%] h-auto object-center" src={image} alt="A keyboard on a dark background" />
     </div>
     </>
-  );
+  );}
 };
 
 export default Home;
+
+
+   
+    // <video style={{width:"100%" ,height:"90%"
+    //      }}  autoPlay  muted > bg-[#090A0B
+
+    //   <source  src={video} type="video/mp4"></source>
+
+
+
+    // </video>
+
+          // <div className=" w-full h-screen bg-[#090A0B] flex flex-col  md:flex-row items-center justify-between gap-[20%]">
+        
+        
+            // <img  className='' src={glow} alt="The glow image here" />
+
+     
+          // <img src={image} alt="Keyboard" className="w-full " />
+
+          
+//               <div className="w-full h-screen bg-[#090A0B] flex flex-col md:flex-row items-center justify-between px-6 md:px-40 py-20 md:py-40 overflow-hidden">
+      
+//      <div
+//   className="relative h-full w-[80%] flex bg-[#090A0B]  items-center z-10 p-6 rounded-xl justify-end"
+//   style={{
+//     backgroundImage: `url(${glow})`,
+//     backgroundPosition: "center",
+//     // backgroundSize: "cover",
+//     // backgroundRepeat: "no-repeat"
+//   }}
+// >
+//   <div>
+//     <p className="text-green-400">Hi there, I’m</p>
+//     <h1 className="text-5xl text-white font-bold">Nilesh Ramlal Patil</h1>
+//     <h2 className="text-2xl font-light text-white">Developer + Designer</h2>
+//     <p className="text-gray-400  mt-4">
+//       I’m a full-stack engineer with experience in design and development of user-centered web and mobile applications. <br />
+//       I am also focusing on mastering UI/UX design. Currently, I’m working on building cloud solutions at <span className="text-green-400">Lorem</span>.
+//     </p>
+//   </div>
+// </div>
+
+
+//       <img className="w-full md:w-[40%] h-auto object-center" src={image} alt="A keyboard on a dark background" />
+//     </div>

@@ -16,7 +16,7 @@ import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy }from
       // console.log(e.isTrusted)
       
     });
-    scrollSpy.update(); // Required for spy to work correctly
+    scrollSpy.update(); // Required for spy to work correctly style={{backgroundColor:`${color}`,opacity:`${hide}`}} backdrop-blur-xl -- blur the background
   }, []);
   const handle=()=>{
     console.log('hello')
@@ -32,8 +32,8 @@ import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy }from
       return (
           <div className='w-full relative'>
             <div>
-        <div style={{backgroundColor:`${color}`,opacity:`${hide}`}} className={` fixed top-0 left-0 hidden z-30 md:flex text-white  w-full  h-fit py-3  bg-transparent justify-center items-center gap-10 `}>
- 
+ <div className="fixed top-0 left-0 z-30 hidden w-full py-3 md:flex items-center justify-center gap-10 text-white bg-transparent backdrop-blur-xl h-fit">
+
   <Link to="Home"   className='font-opensans cursor-pointer text-2xl     font-bold '  spy={true}     activeClass="text-orange-600"   onSetActive={handle}    smooth={true} duration={500} > Home</Link>
   {/* // kabhi kabhi style or className me ek property same property activeClass mat dena jiske agar tumnedi pahle className ke propery chalgi */}
   {/* edar ek problem me classNAme text-white kar diya and activeClass text-oragne kar tu ese kya program sirf white color show ho raha ese li mene ek kam kiya ki className se text-wite propery nikali and parent ko de de acitveClass change nahi ki  */}
