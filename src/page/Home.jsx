@@ -2,44 +2,45 @@ import { useEffect, useState } from 'react';
 import image from '../asset/image.png';
 import glow from '../asset/glow.png';
 import bg from '../asset/bg.mp4';
-
+import { motion, resize } from "motion/react"
+import ReactDOM from 'react-dom'
+import { SocialIcon } from 'react-social-icons'
 const Home = () => {
   const [video, showVideo] = useState(true);
 
+  const [show,setshow] = useState(glow)
   useEffect(() => {
-    const timer = setTimeout(() => {
-      showVideo(false);
-    }, 2000);
+    
+    window.addEventListener('resize',()=>{ // on resize var chalt rahil
+       console.log(window.innerWidth===1311) // calclutate size of screen
+       if(window.innerWidth <=1311){ //<=
+        setshow(false)
+       }
+    })
 
-    // ✅ Corrected: clearTimeout instead of clearInterval
-    return () => clearTimeout(timer);
+    // ✅ Corrected: clearTimeout instead of clearInterval animated matlab final
+    // video chya dikani apn loading animatin app.jsx madhe
+    
   }, []);
 
-  if (video) {
+ 
     return (
-      <div className="w-full h-screen">
-        <video
-          className="absolute top-0 left-0 w-full h-full object-cover"
-          src={bg}
-          autoPlay
-          muted
-          playsInline
-        />
-      </div>
-    );
-  } else {
-    return (
-      <div className="w-full h-screen bg-[#090A0B] flex flex-col md:flex-row items-center gap-11 justify-between px-6 md:px-40 py-20 md:py-40 overflow-hidden">
-      
+       <div className="w-full h-screen ">
+      <div className="w-full h-[92%] bg-[#090A0B] flex flex-col md:flex-row items-center  justify-between px-6 md:px-40 py-20 md:py-40 overflow-x-hidden">
         <div
-          className="relative h-full w-[80%] flex bg-[#090A0B] items-center z-10 p-6 rounded-xl justify-end"
+      
+          className="relative h-full w-[80%] flex bg-[#090A0B] items-center z-10 pr-[5%] rounded-xl justify-end"
           style={{
-            backgroundImage: `url(${glow})`,
+            backgroundImage: `url(${show?`${glow}`:""})`,
             backgroundPosition: "center",
-             backgroundRepeat: "no-repeat"
+             backgroundRepeat: "no-repeat",
           }}
         >
-          <div>
+          <motion.div
+       initial={{ opacity: 0,  }}  
+  animate={{ opacity: 1, y: -30 }}
+  transition={{delay:0.3}}
+    >
             <p className="text-green-400">Hi there, I’m</p>
             <h1 className="text-5xl text-white font-bold">Nilesh Ramlal Patil</h1>
             <h2 className="text-2xl font-light text-white">Developer + Designer</h2>
@@ -47,64 +48,34 @@ const Home = () => {
               I’m a full-stack engineer with experience in design and development of user-centered web and mobile applications. <br />
               I am also focusing on mastering UI/UX design. Currently, I’m working on building cloud solutions at <span className="text-green-400">Lorem</span>.
             </p>
-          </div>
+          </motion.div>
         </div>
 
+    <motion.dev 
     
+    
+    >
+
         <img
-          className="w-full md:w-[40%] h-auto object-center"
+          className="w-full h-auto object-center"
           src={image}
           alt="Illustration"
         />
+    </motion.dev>
+    </div>
+    
+<hr />
+    <div className='w-full bg-[#090A0B] h-[10%]   items-center flex gap-10  justify-end pr-10 '>
+    <SocialIcon  url='https://www.instagram.com/nilesh_patil_954/' />
+    <SocialIcon url='https://www.linkedin.com/in/nilesh-patil-451637322/' />
+    <SocialIcon url='https://github.com/Cyber-Rebel'/>
+    <SocialIcon url='https://discord.com/channels/1342784087856910377/1342784087856910380' />
+    </div>
       </div>
+    
     );
   }
-};
 
 export default Home;
 
-
-   
-    // <video style={{width:"100%" ,height:"90%"
-    //      }}  autoPlay  muted > bg-[#090A0B
-
-    //   <source  src={video} type="video/mp4"></source>
-
-
-
-    // </video>
-
-          // <div className=" w-full h-screen bg-[#090A0B] flex flex-col  md:flex-row items-center justify-between gap-[20%]">
-        
-        
-            // <img  className='' src={glow} alt="The glow image here" />
-
-     
-          // <img src={image} alt="Keyboard" className="w-full " />
-
-          
-//               <div className="w-full h-screen bg-[#090A0B] flex flex-col md:flex-row items-center justify-between px-6 md:px-40 py-20 md:py-40 overflow-hidden">
-      
-//      <div
-//   className="relative h-full w-[80%] flex bg-[#090A0B]  items-center z-10 p-6 rounded-xl justify-end"
-//   style={{
-//     backgroundImage: `url(${glow})`,
-//     backgroundPosition: "center",
-//     // backgroundSize: "cover",
-//     // backgroundRepeat: "no-repeat"
-//   }}
-// >
-//   <div>
-//     <p className="text-green-400">Hi there, I’m</p>
-//     <h1 className="text-5xl text-white font-bold">Nilesh Ramlal Patil</h1>
-//     <h2 className="text-2xl font-light text-white">Developer + Designer</h2>
-//     <p className="text-gray-400  mt-4">
-//       I’m a full-stack engineer with experience in design and development of user-centered web and mobile applications. <br />
-//       I am also focusing on mastering UI/UX design. Currently, I’m working on building cloud solutions at <span className="text-green-400">Lorem</span>.
-//     </p>
-//   </div>
-// </div>
-
-
-//       <img className="w-full md:w-[40%] h-auto object-center" src={image} alt="A keyboard on a dark background" />
-//     </div>
+// inital -fix-final
