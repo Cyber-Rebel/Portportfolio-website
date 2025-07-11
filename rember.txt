@@ -23,4 +23,5 @@ esa email and mobile likha hoga ki i realy wan't work with you`
   // but mere ek folder ek code perfectly fine chla rahta to mere esa kyu kyu use konse pacakge rourter-dom vagre vagre to ek kam kiya mer ese ek pacage to node -version to 
   suite es file wo code frectly run hora tha men esa chocha node ek file use copy nam tha react-awesome-loaders es folder copy kiya and use mere use node  portfilo node module me dal diya problem ek thei muje ki package.json package.lock.json karn ahoga esa muje lagta hae dekte hae ab mer node 20 shift kar de use 
 
-  // mere abs use node ke file copy ki and use node paste code working fine !!
+  // mere abs use node<<<<<< ke file copy ki and use node paste code working fine !!
+  // chang e chorrce but not push
