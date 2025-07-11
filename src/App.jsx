@@ -56,34 +56,22 @@ return(
      else{ return (
           <div className='w-full relative'>
             <div>
- <div className="fixed top-0 left-0 z-30 hidden w-full py-3 md:flex items-center justify-center gap-10 text-white bg-transparent backdrop-blur-xl h-fit">
+<div className="fixed top-0 left-0 w-full py-4 px-6 z-50 bg-black/30 backdrop-blur-xl text-white hidden md:flex justify-between items-center">
+  <div className="text-xl font-bold tracking-wide">Nilesh Patil</div>
+  <div className="flex gap-8 text-sm font-medium tracking-wide">
+    <button className="hover:text-indigo-400 transition">ABOUT</button>
+    <button className="hover:text-indigo-400 transition">RESUME</button>
+    <button className="hover:text-indigo-400 transition">WORKS</button>
+    <button className="hover:text-indigo-400 transition">CONTACT</button>
+  </div>
+</div>
 
-  <Link to="Home"   className='font-opensans cursor-pointer text-2xl     font-bold '  spy={true}     activeClass="text-orange-600"   onSetActive={handle}    smooth={true} duration={500} > Home</Link>
-  {/* // kabhi kabhi style or className me ek property same property activeClass mat dena jiske agar tumnedi pahle className ke propery chalgi */}
-  {/* edar ek problem me classNAme text-white kar diya and activeClass text-oragne kar tu ese kya program sirf white color show ho raha ese li mene ek kam kiya ki className se text-wite propery nikali and parent ko de de acitveClass change nahi ki  */}
-      <Link  to="about" className='font-opensans cursor-pointer font-bold text-xl' spy={true}    activeClass="text-orange-600"     onSetActive={run} offset={2} smooth={true} duration={500}     >ABOUT</Link>
-      <Link  to="Resume" className=' font-opensans cursor-pointer font-bold text-xl' spy={true}    activeClass="text-orange-600"     smooth={true} duration={500}   >RESUME</Link>
-      <Link to="works" className=' font-opensans cursor-pointer font-bold text-xl' spy={true}    activeClass="text-orange-600"    smooth={true} duration={500}     >WORKS</Link>
-      <Link to="contact" className=' font-opensans  cursor-pointer font-bold text-xl' spy={true}    activeClass="text-orange-600"     smooth={true} duration={500}     >Contact</Link>
-      </div>
-        <Element name="Home">
           <Home/>
-          </Element>
-          <Element name="about">
         <About />
-          </Element>
-        <Element name="Resume">
-        <Resume />
-        </Element>
-  <Element name="works">
-
+        {/* <Resume />
         <Work />
-  </Element>
-  <Element name="contact">
+          <Contact /> */}
 
-          <Contact />
-
-  </Element>
   </div>
 
       </div>
