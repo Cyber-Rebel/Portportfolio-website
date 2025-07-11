@@ -2,7 +2,7 @@
 
   import{useEffect, useState} from 'react'
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy }from 'react-scroll';
-// import { BoltLoader } from "react-awesome-loaders"
+import { BoltLoader } from "react-awesome-loaders"
   import Home from './page/Home.jsx'
   import About from './page/About';
   import Resume from './page/Resume';
@@ -40,11 +40,11 @@ if(Load){
 return(
   
  <div className='w-full h-screen  flex-col flex justify-center items-center  bg-[#1A202C] '>
-        {/* <BoltLoader
+        <BoltLoader
          className={"loaderbolt"} 
           boltColor={"#6366F1"}
           backgroundBlurColor={"#E0E7FF"}
-       /> */}
+       />
      </div> 
 
 
@@ -91,4 +91,18 @@ return(
      }}
 
   export default App
-  
+  // c6ecebbclassName={"loaderbolt"} 
+
+
+  // --------------------
+  // uderstand a problem ek package hae jo hame loader provide karta hae but problem hae ki wo mer statye hone nahi hora tha only showning waring to mer kya kiya
+  // part -1 
+  // ese pacagek github kiya use file copy and use npm i package install kiya use wo huva but problem ab wo proper use nahi hora tah jo code tha 
+  // or me ke devlper jo har nai manta to mane soch ki chatgpt puse use mer gand mar di 
+  // 
+
+  // to mene soch ki ye libarry or packge 4 old hae to node version piche kiya chaiye to node version 14 donwolasd kiya ko ki workable nahi tha 
+  // read the rember.text
+
+  // fir bhi koi issuene to aarra hae to kyu react-rourter-dom ke package node ka version 20 + chaiye tah t or mere 18 kiya to 
+  // but 

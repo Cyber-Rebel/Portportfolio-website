@@ -5,3 +5,22 @@ in portfilo section me ham laste constant me sirf ek butthon hoga jisme likha ho
 
 Send email if you are intert email hame send hona chaiye only mobile and email ek saath ek letter hoga jisem 
 esa email and mobile likha hoga ki i realy wan't work with you`
+  // --------------------
+        IS issune ko slove karne ke liye muje 2 din lage
+// npm install react-awesome-loaders
+  // uderstand a problem ek package hae jo hame loader provide karta hae but problem hae ki wo mer statye hone nahi hora tha only showning waring to mer kya kiya
+  // part -1 
+  // ese pacagek github kiya use file copy and use npm i package install kiya use wo huva but problem ab wo proper use nahi hora tah jo code tha 
+  // or me ke devlper jo har nai manta to mane soch ki chatgpt puse use mer gand mar di sach mene jocha ek version cheak kart mene tukha mara
+  node ka version -18 downoad kiya ab properly work karne liga dekle bhaii 
+
+  nvm install 18
+  nvm use 18
+.// cmd hae ye 
+//v18.20.8 this version is best of the package 
+
+/ fir bhi koi issuene to aarra hae to kyu react-rourter-dom ke package node ka version 20 + chaiye tah t or mere 18 kiya to 
+  // but mere ek folder ek code perfectly fine chla rahta to mere esa kyu kyu use konse pacakge rourter-dom vagre vagre to ek kam kiya mer ese ek pacage to node -version to 
+  suite es file wo code frectly run hora tha men esa chocha node ek file use copy nam tha react-awesome-loaders es folder copy kiya and use mere use node  portfilo node module me dal diya problem ek thei muje ki package.json package.lock.json karn ahoga esa muje lagta hae dekte hae ab mer node 20 shift kar de use 
+
+  // mere abs use node ke file copy ki and use node paste code working fine !!
