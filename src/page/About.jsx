@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from 'react-router-dom';
 import { IoCloudDownloadSharp } from 'react-icons/io5';
-
+import {PlusSquareFilled } from '@ant-design/icons'
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
@@ -64,7 +64,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="bg-[#1E2125] h-100vh pt-[6%] pb-24 text-white min-h-screen px-4 sm:px-8">
+    <div className="bg-[#1E2125] bg-[#141414] h-100vh pt-[6%] pb-24 text-white min-h-screen px-4 sm:px-8">
     
       <div>
         <div
@@ -92,55 +92,84 @@ const About = () => {
           Build Cool Things.
         </div>
       </div>
+      <div className='mt-36'>
+
+<div>
+      <div className='w-full  text-center'>Show casing Project </div>
+  <div className="flex flex-col items-center">
+
+    <div className="w-4 h-4 bg-blue-500 border-2 border-blue-300 rounded-full"></div>
+
+    <div className="w-px h-40 bg-gray-300"></div>
+  </div>
+  </div>
+
+</div>
+
+<div className='bg-red-700 w-full  '>
+  <PlusSquareFilled />
+
+  
+  </div>
+  <div>
+      <div className='w-full  text-center'>Show casing Project </div>
+  <div className="flex flex-col items-center">
+
+    <div className="w-4 h-4 bg-blue-500 border-2 border-blue-300 rounded-full"></div>
+
+    <div className="w-px h-40 bg-gray-300"></div>
+  </div>
+  </div>
+      </div>
 
     
-      <div className="pt-[9%] w-full text-white">
-        <div className="  mx-12 max-w-5xl md:mx-auto space-y-10">
-          <section>
-            <h1 className="text-3xl font-extrabold border-blue-500   md:pb-2 mb-4">
-              About Me
-            </h1>
-            <p className=" text-lg leading-relaxed text-gray-300">
-              I am a third-year B.Tech student with strong technical skills in the MERN Stack <br />
-              and a solid grasp of the Linux OS. I have a keen interest in designing and developing
-              <br /> applications that solve real-world problems.
-            </p>
-          </section>
-
-          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-8">
-            <div>
-              <h1 className="text-2xl sm:text-4xl font-bold pb-2 mb-4">Contact Details</h1>
-              <ul className="space-y-2 text-gray-300 text-lg">
-                <li>
-                  <span className="font-semibold text-white">Name:</span> Nilesh Ramlal Patil
-                </li>
-                <li>
-                  <span className="font-semibold text-white">Location:</span> Jalgaon, Maharashtra 424206
-                </li>
-                <li>
-                  <span className="font-semibold text-white">Phone:</span> +91 7972590399
-                </li>
-                <li>
-                  <span className="font-semibold text-white">Email:</span> np103177@gmail.com
-                </li>
-              </ul>
-            </div>
-
-            <div className="flex justify-center items-center  sm:justify-end  ">
-              <Link
-                to="https://drive.google.com/file/d/1TppvuoogheptDQMECjO9tRX3LjgtUZgs/view?usp=sharing"
-                className="p-4 flex items-center gap-3 text-lg font-bold bg-[#444444] rounded-md hover:bg-[#555] transition"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <IoCloudDownloadSharp className="text-xl" /> Download Resume
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 
 export default About;
+
+      // <div className="pt-[9%] w-full text-white">
+      //   <div className="  mx-12 max-w-5xl md:mx-auto space-y-10">
+      //     <section>
+      //       <h1 className="text-3xl font-extrabold border-blue-500   md:pb-2 mb-4">
+      //         About Me
+      //       </h1>
+      //       <p className=" text-lg leading-relaxed text-gray-300">
+      //         I am a third-year B.Tech student with strong technical skills in the MERN Stack <br />
+      //         and a solid grasp of the Linux OS. I have a keen interest in designing and developing
+      //         <br /> applications that solve real-world problems.
+      //       </p>
+      //     </section>
+
+      //     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-8">
+      //       <div>
+      //         <h1 className="text-2xl sm:text-4xl font-bold pb-2 mb-4">Contact Details</h1>
+      //         <ul className="space-y-2 text-gray-300 text-lg">
+      //           <li>
+      //             <span className="font-semibold text-white">Name:</span> Nilesh Ramlal Patil
+      //           </li>
+      //           <li>
+      //             <span className="font-semibold text-white">Location:</span> Jalgaon, Maharashtra 424206
+      //           </li>
+      //           <li>
+      //             <span className="font-semibold text-white">Phone:</span> +91 7972590399
+      //           </li>
+      //           <li>
+      //             <span className="font-semibold text-white">Email:</span> np103177@gmail.com
+      //           </li>
+      //         </ul>
+      //       </div>
+
+      //       <div className="flex justify-center items-center  sm:justify-end  ">
+      //         <Link
+      //           to="https://drive.google.com/file/d/1TppvuoogheptDQMECjO9tRX3LjgtUZgs/view?usp=sharing"
+      //           className="p-4 flex items-center gap-3 text-lg font-bold bg-[#444444] rounded-md hover:bg-[#555] transition"
+      //           target="_blank"
+      //           rel="noopener noreferrer"
+      //         >
+      //           <IoCloudDownloadSharp className="text-xl" /> Download Resume
+      //         </Link>
+      //       </div>
+      //     </div>
+      //   </div>
+      // </div>

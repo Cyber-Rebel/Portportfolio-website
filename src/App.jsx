@@ -3,6 +3,7 @@
   import{useEffect, useState} from 'react'
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy }from 'react-scroll';
   import Home from './page/Home.jsx'
+  import { SmileFilled } from '@ant-design/icons';
   import About from './page/About';
   import Resume from './page/Resume';
   import Work from './page/Works.jsx';
@@ -57,7 +58,9 @@ return(
           <div className='w-full relative'>
             <div>
 <div className="fixed top-0 left-0 w-full py-4 px-6 z-50 bg-black/30 backdrop-blur-xl text-white hidden md:flex justify-between items-center">
-  <div className="text-xl font-bold tracking-wide">Nilesh Patil</div>
+  <div className="text-xl font-bold tracking-wide pl-3">Nilesh Patil
+    <SmileFilled  className=' ml-3  text-[#1677FF]'/>
+  </div>
   <div className="flex gap-8 text-sm font-medium tracking-wide">
     <button className="hover:text-indigo-400 transition">ABOUT</button>
     <button className="hover:text-indigo-400 transition">RESUME</button>
