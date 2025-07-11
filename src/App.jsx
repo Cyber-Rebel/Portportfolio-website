@@ -2,7 +2,6 @@
 
   import{useEffect, useState} from 'react'
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy }from 'react-scroll';
-import { BoltLoader } from "react-awesome-loaders"
   import Home from './page/Home.jsx'
   import About from './page/About';
   import Resume from './page/Resume';
