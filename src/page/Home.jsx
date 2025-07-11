@@ -15,6 +15,9 @@ const Home = () => {
        }
     })
 
+     if(window.innerWidth <=1311){
+        setshow(false)
+       }
     // ✅ Corrected: clearTimeout instead of clearInterval animated matlab final
     // video chya dikani apn loading animatin app.jsx madhe
     
@@ -41,10 +44,15 @@ const Home = () => {
             <p className="text-green-400">Hi there, I’m</p>
             <h1 className="text-5xl text-white font-bold">Nilesh Ramlal Patil</h1>
             <h2 className="text-2xl font-light text-white">Developer + Designer</h2>
-            <p className="text-gray-400 mt-4">
+            <p className="text-gray-400  relative mt-4 z-40">
               I’m a full-stack engineer with experience in design and development of user-centered web and mobile applications. <br />
+<img className='md:hidden absolute -z-40' src={image} alt="" />
               I am also focusing on mastering UI/UX design. Currently, I’m working on building cloud solutions at <span className="text-green-400">Lorem</span>.
-            </p>
+              tered web and mobile applications.
+I am also focusing on mastering UI/UX design. Currently, I’m working on building cloud solutions at Lorem.￼
+            
+            </p> 
+            
           </motion.div>
         </div>
 
@@ -54,7 +62,7 @@ const Home = () => {
     >
 
         <img
-          className="w-full h-auto object-center"
+          className=" hidden md:block w-full h-auto object-center"
           src={image}
           alt="Illustration"
         />
