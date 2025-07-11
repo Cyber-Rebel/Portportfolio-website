@@ -6,6 +6,7 @@ import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy }from
   import About from './page/About';
   import Resume from './page/Resume';
   import Work from './page/Works.jsx';
+  import BoltLoader from './utils/BoltLoader.jsx'
   import Contact from './page/Contact.jsx';
   const App = () => {
     const [color,setcolor]=useState('transparent')
