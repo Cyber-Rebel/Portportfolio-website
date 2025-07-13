@@ -15,7 +15,7 @@ const Home = () => {
        }
     })
 
-     if(window.innerWidth <=1311){
+     if(window.innerWidth <=1311){  
         setshow(false)
        }
     // ✅ Corrected: clearTimeout instead of clearInterval animated matlab final

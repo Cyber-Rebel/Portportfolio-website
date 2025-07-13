@@ -1,14 +1,10 @@
 
 
   import{useEffect, useState} from 'react'
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy }from 'react-scroll';
   import Home from './page/Home.jsx'
   import { SmileFilled } from '@ant-design/icons';
   import About from './page/About';
-  import Resume from './page/Resume';
-  import Work from './page/Works.jsx';
   import BoltLoader from './utils/BoltLoader.jsx'
-  import Contact from './page/Contact.jsx';
   const App = () => {
     const [color,setcolor]=useState('transparent')
     const[hide,sethide]=useState('10')
@@ -18,8 +14,7 @@ import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy }from
       // console.log(e.isTrusted)
       
     });
-    scrollSpy.update(); // Required for spy to work correctly style={{backgroundColor:`${color}`,opacity:`${hide}`}} backdrop-blur-xl -- blur the background
-
+ 
     const timer= setTimeout(()=>{
       SetLoad(false)
     },5000)
@@ -71,9 +66,7 @@ return(
 
           <Home/>
         <About />
-        {/* <Resume />
-        <Work />
-          <Contact /> */}
+       
 
   </div>
 
@@ -82,18 +75,4 @@ return(
      }}
 
   export default App
-  // c6ecebbclassName={"loaderbolt"} 
-
-
-  // --------------------
-  // uderstand a problem ek package hae jo hame loader provide karta hae but problem hae ki wo mer statye hone nahi hora tha only showning waring to mer kya kiya
-  // part -1 
-  // ese pacagek github kiya use file copy and use npm i package install kiya use wo huva but problem ab wo proper use nahi hora tah jo code tha 
-  // or me ke devlper jo har nai manta to mane soch ki chatgpt puse use mer gand mar di 
-  // 
-
-  // to mene soch ki ye libarry or packge 4 old hae to node version piche kiya chaiye to node version 14 donwolasd kiya ko ki workable nahi tha 
-  // read the rember.text
-
-  // fir bhi koi issuene to aarra hae to kyu react-rourter-dom ke package node ka version 20 + chaiye tah t or mere 18 kiya to 
-  // but 
+ 

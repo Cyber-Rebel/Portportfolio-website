@@ -26,3 +26,19 @@ esa email and mobile likha hoga ki i realy wan't work with you`
   // mere abs use node<<<<<< ke file copy ki and use node paste code working fine !!
   // chang e chorrce but not push
   // node_modules delete
+   // c6ecebbclassName={"loaderbolt"} 
+  
+
+
+  // --------------------
+  // uderstand a problem ek package hae jo hame loader provide karta hae but problem hae ki wo mer statye hone nahi hora tha only showning waring to mer kya kiya
+  // part -1 
+  // ese pacagek github kiya use file copy and use npm i package install kiya use wo huva but problem ab wo proper use nahi hora tah jo code tha 
+  // or me ke devlper jo har nai manta to mane soch ki chatgpt puse use mer gand mar di 
+  // 
+
+  // to mene soch ki ye libarry or packge 4 old hae to node version piche kiya chaiye to node version 14 donwolasd kiya ko ki workable nahi tha 
+  // read the rember.text
+
+  // fir bhi koi issuene to aarra hae to kyu react-rourter-dom ke package node ka version 20 + chaiye tah t or mere 18 kiya to 
+  // but 
