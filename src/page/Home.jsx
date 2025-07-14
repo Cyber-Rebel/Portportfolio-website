@@ -56,7 +56,7 @@ I am also focusing on mastering UI/UX design. Currently, I’m working on buildi
           </motion.div>
         </div>
 
-    <motion.dev 
+    <motion.div 
     
     
     >
@@ -66,7 +66,7 @@ I am also focusing on mastering UI/UX design. Currently, I’m working on buildi
           src={image}
           alt="Illustration"
         />
-    </motion.dev>
+    </motion.div>
     </div>
     
 <hr />

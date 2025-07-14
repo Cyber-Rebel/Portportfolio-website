@@ -17,7 +17,7 @@
  
     const timer= setTimeout(()=>{
       SetLoad(false)
-    },5000)
+    },50)
     return ()=> clearTimeout(timer) // clear time in funcation exapmle rember
    
   }, []);
@@ -30,17 +30,16 @@
   const run  = ()=>{
     setcolor('#252525')
   }
-  console.log(hide)
    
 if(Load){
 return(
   
  <div className='w-full h-screen  flex-col flex justify-center items-center  bg-[#1A202C] '>
-        <BoltLoader
-         className={"loaderbolt"} 
-          boltColor={"#6366F1"}
-          backgroundBlurColor={"#E0E7FF"}
-       />
+        {/* <BoltLoader
+        className={"loaderbolt"} 
+           boltColor={"#6366F1"}
+         backgroundBlurColor={"#E0E7FF"}
+       /> */}
      </div> 
 
 
