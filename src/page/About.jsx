@@ -39,8 +39,6 @@ setval((prev)=>{
     
 
 
-
-
     return () => {
       clearInterval(tim)
     };
@@ -130,3 +128,39 @@ export default About;
     //     },
     //   }
     // );
+
+    // dyanims value stastick valu use kile  const [val,setval] = useState(30)
+  // const [dir,setdir] = useState(true)
+//   useEffect(() => {
+
+// let tim = setInterval(()=>{
+// setval((prev)=>{
+//     if(prev>140){
+//       setdir(false)
+//       return 139
+      
+//     }else if(prev<30){
+//       setdir(true)
+//       return 31 
+//     }
+//     // else{
+//      return  dir?prev+1:prev-1
+// })
+
+
+  
+// },100)
+    
+
+
+
+
+//     return () => {
+//       clearInterval(tim)
+//     };
+//   }, []);
+
+//   console.log(val)
+
+
+// -- ese ach hae val me ek object pass karo use use karo
