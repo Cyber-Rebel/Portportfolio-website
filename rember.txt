@@ -97,7 +97,12 @@ Agar aapko chahiye, to main har shape ka **live SVG output** bhi bana ke dikha s
 
 
 
+//  stickman postion 
+// increment dir cheak 
 
+// increment -> cheak -> return 
+// {dir,val}
+// return dir cheak karu  latest value
 
 
 
