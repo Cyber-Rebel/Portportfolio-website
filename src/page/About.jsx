@@ -25,6 +25,8 @@ const [moverightleg ,setmoverightleg]= useState({
 })
 
   useEffect(() => {
+    
+    
    let timer= setInterval(() => {
       setmoveleftleg((prev)=>{
         let newvalue= prev.dir ? prev.val+1 : prev.val-1
@@ -57,24 +59,58 @@ const [moverightleg ,setmoverightleg]= useState({
         }
 
 
-
+        
       })
       
     }, 10);
+    const t1= gsap.timeline({
+      repeat:-1
+    })
     
 
-    gsap.fromTo(moves.current,{
+    t1.to(moves.current,{
 
-      x:'-20%',
-      duration:40,
-      scale:0.7
-
-    },{
-       x:'100%',
-      duration:40,
-      scale:0.3
+      x:'1000px',
+      duration:6,
+    
+       // animation repet kartga but problem haeki ham (a,b postion) a->b->a->b 
+      // yoyo:true, // (a,b postion) a->b->b->a cool
     })
+    .to(moves.current,{
+      rotate:-90,
 
+  duration:1,
+    })
+    t1.to(moves.current,{
+
+      y:'600px',
+      duration:6,
+    })
+    .to(moves.current,{
+      rotate:0,
+
+  duration:1,
+    })
+      t1.to(
+        moves.current,{
+
+      x:'0px',
+      duration:6
+    }
+      )
+
+      .to(moves.current,{
+        rotate:90,
+        x:"190px"
+      })
+      
+      t1.to(moves.current,{
+
+      y:'0px',
+      duration:6
+
+    })
+    
 
 
     
@@ -159,39 +195,36 @@ const [moverightleg ,setmoverightleg]= useState({
       </div>
       <div className="mt-36"></div>
       {/* Project Show Casing */}
-  <div ref={moves} className="w-full ">
+      <div  className="w-full h-screen bg-black">
+  <div ref={moves} className="w-10 h-10 " >
     
-<svg viewBox="0 0 200 300" className="w-64 h-auto">
+<svg className="w-fit h-[300px]">
+  // {/* SVG Border *
+  {/* <rect x="0" y="0" width="100%" height="100%" className="stroke-gray-400 fill-transparent" strokeWidth="3" /> */}
+
   {/* Head */}
-  <circle cx="100" cy="40" r="30"  strokeWidth="5"  className="stroke-blue-400 fill-transparent " />
-
-  {/* Eyes */}
-
-
-  {/* Nose */}
-  {/* <line x1="100" y1="38" x2="100" y2="45" className="stroke-blue-400 stroke-[2]" /> */}
-
-  {/* Smile */}
+  <circle cx="100" cy="40" r="30" strokeWidth="5" className="stroke-blue-400 fill-transparent" />
 
   {/* Body */}
-  <line x1="100" y1="70" x2="100" y2="150" strokeWidth="7" className="stroke-blue-400 " />
+  <line x1="100" y1="70" x2="100" y2="150" strokeWidth="7" className="stroke-blue-400" />
 
   {/* Left Arm */}
-  <line x1="100" y1="90" x2={moveleftleg.val+10} y2="120" strokeWidth="7" className="stroke-blue-400 " />
+  <line x1="100" y1="90" x2={moveleftleg.val + 10} y2="120" strokeWidth="7" className="stroke-blue-400" />
 
-  {/* Right Arm (bent) */}
-  <line x1="100" y1="90" x2={moverightleg.val+10}y2="126" strokeWidth="7" className="stroke-blue-400 " />
+  {/* Right Arm */}
+  <line x1="100" y1="90" x2={moverightleg.val + 10} y2="126" strokeWidth="7" className="stroke-blue-400" />
 
   {/* Left Leg */}
-  <line x1="100" y1="150" x2={moverightleg.val} y2="220" strokeWidth="7" className="stroke-blue-400 " />
+  <line x1="100" y1="150" x2={moverightleg.val} y2="220" strokeWidth="7" className="stroke-blue-400" />
 
   {/* Right Leg */}
-  <line x1="100" y1="150" x2={moveleftleg.val} y2="220"  strokeWidth="7" className="stroke-blue-400 " />
-</svg>
+  <line x1="100" y1="150" x2={moveleftleg.val} y2="220" strokeWidth="7" className="stroke-blue-400" />
+</svg> 
+
 
   </div>
 
-
+</div>
 
       
     </div>
@@ -199,8 +232,10 @@ const [moverightleg ,setmoverightleg]= useState({
 };
 
 export default About;
-// setinterval is not good way instan we can applay gsap
-// 🔹 forwardRef React ka ek function hai jo aapko allow karta hai ref ko ek component ke andar pass karne ke liye — yani agar aap kisi custom component ko ref dena chahte ho, to uske liye forwardRef ka use karna padta hai.
-// hand move in gsap in useEfect and repet
+// svg path 
 
-// bhaii aaj apata chala svg ko gsap se kam kart hae youtube sheriyan ke video muje timeline sikna but dek hae 
+  // x:'100%',
+  //     duration:6,
+  //     scale:0.7,
+  //     repeat:-1,  // animation repet kartga but problem haeki ham (a,b postion) a->b->a->b 
+  //     // yoyo:true, // (a,b postion) a->b->b->a cool
