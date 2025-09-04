@@ -1,0 +1,19 @@
+/* 🌍 Global navbar styles */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Manufacturing+Consent&family=Outfit:wght@100..900&family=Rubik+Distressed&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+/* 
+font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; 
+  font-style: normal; */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; 
+  font-style: normal;
+  
+  color: #ffffff;
+}

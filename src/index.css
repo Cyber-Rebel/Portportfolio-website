@@ -1,7 +1,33 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-body {
-  overflow-x: hidden;
+@import "tailwindcss";
+/* Global selection style */
+::selection {
+  background: #A9927D;  /* yellow background */
+  color: #000;          /* black text */
 }
 
+/* Agar specific element ka hi change karna ho */
+p::selection {
+  background: #ff0000;  /* red */
+  color: #fff;          /* white text */
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0A0908;
+
+ 
+}
+@font-face {
+  font-family: font1;
+  src: url(../public/font3.woff2);
+}
+@font-face {
+  font-family: font8;
+  src: url(../public/font3.woff2);
+}@font-face {
+  font-family: font9;
+  src: url(../public/font3.woff2);
+}

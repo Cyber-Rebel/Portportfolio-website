@@ -1,78 +1,107 @@
-import { useEffect, useState } from 'react';
-import image from '../asset/image.png';
-import glow from '../asset/glow.png';
-import { motion, resize } from "motion/react"
-import { SocialIcon } from 'react-social-icons'
+import React, { useEffect, useState ,useRef } from 'react'
+import Navabar from '../components/Navabar.jsx'
+import Projectsection from '../components/Projectsection.jsx'
+import Hero from '../components/Hero.jsx'
+import AboutIntro from '../components/AboutIntro.jsx'
+import Introsection from '../components/Introsection.jsx'
+import Footer from '../components/Footer.jsx'
+import MouseFollower from '../components/MouserFollwer.jsx'
+
 const Home = () => {
-
-  const [show,setshow] = useState(glow)
-  useEffect(() => {
-    
-    window.addEventListener('resize',()=>{ // on resize var chalt rahil
-       console.log(window.innerWidth===1311) // calclutate size of screen
-       if(window.innerWidth <=1311){ //<=
-        setshow(false)
-       }
-    })
-
-    // ✅ Corrected: clearTimeout instead of clearInterval animated matlab final
-    // video chya dikani apn loading animatin app.jsx madhe
-    
-  }, []);
-
  
-    return (
-       <div className="w-full h-screen ">
-      <div className="w-full h-[92%] bg-[#090A0B] flex flex-col md:flex-row items-center  justify-between px-6 md:px-40 py-20 md:py-40 overflow-x-hidden">
-        <div
-      
-          className="relative h-full w-[80%] flex bg-[#090A0B] items-center z-10 pr-[5%] rounded-xl justify-end"
-          style={{
-            backgroundImage: `url(${show?`${glow}`:""})`,
-            backgroundPosition: "center",
-             backgroundRepeat: "no-repeat",
-          }}
-        >
-          <motion.div
-       initial={{ opacity: 0,  }}  
-  animate={{ opacity: 1, y: -30 }}
-  transition={{delay:0.3}}
-    >
-            <p className="text-green-400">Hi there, I’m</p>
-            <h1 className="text-5xl text-white font-bold">Nilesh Ramlal Patil</h1>
-            <h2 className="text-2xl font-light text-white">Developer + Designer</h2>
-            <p className="text-gray-400 mt-4">
-              I’m a full-stack engineer with experience in design and development of user-centered web and mobile applications. <br />
-              I am also focusing on mastering UI/UX design. Currently, I’m working on building cloud solutions at <span className="text-green-400">Lorem</span>.
-            </p>
-          </motion.div>
-        </div>
 
-    <motion.dev 
-    
-    
-    >
+  return (
+   <div className="h-auto w-full bg-[#121314] text-white flex flex-col">
+<Navabar />
+<div className='h-[100%] w-full '>
 
-        <img
-          className="w-full h-auto object-center"
-          src={image}
-          alt="Illustration"
-        />
-    </motion.dev>
-    </div>
-    
-<hr />
-    <div className='w-full bg-[#090A0B] h-[10%]   items-center flex gap-10  justify-end pr-10 '>
-    <SocialIcon  url='https://www.instagram.com/nilesh_patil_954/' />
-    <SocialIcon url='https://www.linkedin.com/in/nilesh-patil-451637322/' />
-    <SocialIcon url='https://github.com/Cyber-Rebel'/>
-    <SocialIcon url='https://discord.com/channels/1342784087856910377/1342784087856910380' />
-    </div>
-      </div>
-    
-    );
-  }
+<Hero />
+</div>
+
+
+</div>
+  )
+}
 
 export default Home;
 
-// inital -fix-final
+// use kase ref ek jisme bare kuch nahi pata use div ko levkar ref me pass kare cosole.log karo aapko smjt aayega ki wo div ka pura access milgya
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//   <meta charset="UTF-8" />
+//   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+//   <title>Tech Stack</title>
+//   <style>
+//     :root{
+//       --spot: rgba(255,255,255,0.12); /* subtle white glow */
+//       --line: rgba(10, 75, 255, 0.12); /* faint horizontal line */
+//       --side: rgba(255,255,255,0.2);  /* small side lines */
+//       --text: rgba(255,255,255,0.8);  /* text more visible */
+//     }
+
+//     html, body {
+//       height: 100%;
+//     }
+//     body{
+//       margin:0;
+//       display:flex;
+//       align-items:center;
+//       justify-content:center;
+//       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+//       color: var(--text);
+
+//       /* background effect with circular spotlight */
+//       background:
+//         /* faint 1px horizontal line */
+//         linear-gradient(to bottom,
+//           transparent 49.5%,
+//           var(--line) 50%,
+//           transparent 50.5%
+//         ),
+//         /* circular spotlight */
+//         radial-gradient(circle at center,
+//           var(--spot) 0%,
+//           rgba(0,0,0,0) 70%
+//         ),
+//         #000;
+//       background-repeat: no-repeat;
+//       background-attachment: fixed;
+//       overflow:hidden;
+//     }
+
+//     .center-wrap{
+//       display:flex;
+//       align-items:center;
+//       gap:16px;
+//       padding:24px 28px;
+//       border-radius:12px;
+//     }
+
+//     .side-line{
+//       height:1px;
+//       width:90px;
+//       background: var(--side);
+//     }
+
+//     .label{
+//       font-style: italic;
+//       letter-spacing:.2px;
+//       color: var(--text);
+//       white-space: nowrap;
+//     }
+
+//     @media (max-width:420px){
+//       .side-line{ width:56px; }
+//     }
+//   </style>
+// </head>
+// <body>
+//   <div class="center-wrap">
+//     <div class="side-line"></div>
+//     <div class="label">Tech Stack</div>
+//     <div class="side-line"></div>
+//   </div>
+// </body>
+// </html>
+
