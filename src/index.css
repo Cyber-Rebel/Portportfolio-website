@@ -22,12 +22,28 @@ p::selection {
 }
 @font-face {
   font-family: font1;
-  src: url(../public/font3.woff2);
+  src: url(../public/font1.woff2);
 }
 @font-face {
   font-family: font8;
   src: url(../public/font3.woff2);
 }@font-face {
   font-family: font9;
+  src: url(../public/font3.woff2);
+}
+@font-face {
+  font-family: font7;
+  src: url(../public/font7.woff2);
+}@font-face {
+  font-family: font6;
+  src: url(../public/font6.woff2);
+}@font-face {
+  font-family: font5;
+  src: url(../public/font5.woff2);
+}@font-face {
+  font-family: font4;
+  src: url(../public/font4.woff2);
+}@font-face {
+  font-family: font3;
   src: url(../public/font3.woff2);
 }

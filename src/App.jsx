@@ -1,13 +1,14 @@
 import React from 'react'
 import './global.css'
-import Home from './page/Home'
-import About from './page/About'
+import MainRoutes from './Routes/MainRoutes.jsx'
+import Navabar from './components/Navabar.jsx'
 
 const App = () => {
   return (
     <div className='Father_class overflow-x-hidden'>
-      <Home/> 
-      {/* <About/> */}
+<Navabar />
+
+      <MainRoutes />
     </div>
   )
 }

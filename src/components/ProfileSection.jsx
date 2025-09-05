@@ -3,16 +3,16 @@ import { PhoneCall } from "lucide-react";
 
 const ProfileSection = () => {
   return (
-    <div className="bg-zinc-900 rounded-2xl p-6 shadow-lg flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
+    <div className="bg-zinc-900 rounded-2xl p-6 shadow-lg flex items-center space-x-6">
       <img
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz1mHFSD9UAf9NKkI7_buBIIOdn6AY5rxqAA&s"
         alt="Profile"
         className="w-20 h-20 rounded-full object-cover ring-2 ring-blue-500"
       />
-      <div className="flex-1 text-center md:text-left">
+      <div>
         <h1 className="text-2xl font-bold">Nilesh Patil</h1>
         <p className="text-gray-400">Full Stack Developer</p>
-        <div className="mt-3 flex flex-wrap justify-center md:justify-start gap-3 text-blue-400 text-sm">
+        <div className="mt-3 flex flex-wrap gap-3 text-blue-400 text-sm">
           <a href="mailto:np103177@gmail.com" className="hover:underline">
             np103177@gmail.com
           </a>
@@ -50,9 +50,9 @@ const ProfileSection = () => {
           </a>
         </div>
       </div>
-      <div className="flex items-center gap-2 text-sm">
-        <span><PhoneCall size={16} /></span>
-        <span>+91 7972590399</span>
+      <div className="flex gap-2">
+        <span><PhoneCall /></span>
+        +91 7972590399
       </div>
     </div>
   );
