@@ -12,7 +12,6 @@ const Home = () => {
 
   return (
    <div className="h-auto w-full bg-[#121314] text-white flex flex-col">
-<Navabar />
 <div className='h-[100%] w-full '>
 
 <Hero />
