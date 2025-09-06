@@ -24,6 +24,75 @@ p::selection {
   font-family: font1;
   src: url(../public/font1.woff2);
 }
+
+/* Marquee (continuous, seamless) */
+.marquee-container {
+  overflow: hidden;
+  position: relative; /* required for gradient fades */
+}
+
+/* optional edge fades for a nicer look */
+.marquee-container::before,
+.marquee-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 64px; /* fade width */
+  pointer-events: none;
+  z-index: 2;
+}
+.marquee-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(10,9,8,1), rgba(10,9,8,0));
+}
+.marquee-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(10,9,8,1), rgba(10,9,8,0));
+}
+
+/* The moving track that holds two identical groups */
+.marquee {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem; /* matches gap-1 in Tailwind */
+  will-change: transform;
+  animation: marquee-scroll 14s linear infinite;
+}
+
+/* Content groups; ensure single line so widths add up exactly */
+.marquee .texts {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  white-space: nowrap;
+}
+
+/* Optional chip styling if spans are plain */
+.marquee .texts span {
+  display: inline-flex;
+  align-items: center;
+
+  border-radius: 9999px;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* move left by exactly one group's width (two identical groups present) */
+    transform: translateX(-50%);
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    animation-duration: 0.001s;
+    animation-iteration-count: 1;
+  }
+}
 @font-face {
   font-family: font8;
   src: url(../public/font3.woff2);
