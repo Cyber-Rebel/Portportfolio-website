@@ -14,7 +14,7 @@ const Home = () => {
    <div className="h-auto w-full bg-[#121314] text-white flex flex-col">
 
 <Hero />
-<div className='w-full  flex items-center justify-center flex-wrap'>
+<div  className='w-full  flex items-center justify-center flex-wrap'>
 
 <Projectsection/>
 <Projectsection/>

@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 import Spline from "@splinetool/react-spline";
 
 const techStack = [
-  { name: "React", logo: "../public/react.svg" },
+  { name: "React", logo: "/react.svg" },
   { name: "Redux", logo: "https://cdn.worldvectorlogo.com/logos/redux.svg" },
-  { name: "Mongodb", logo: "../public/mongodb.svg" },
+  { name: "Mongodb", logo: "/mongodb.svg" },
   { name: "Vector Database",logo:"https://www.svgrepo.com/show/499816/database.svg" },
-  { name: "Github",logo:"../public/github.svg " },
+  { name: "Github",logo:"/github.svg " },
   { name: "Linux" ,logo:"https://upload.wikimedia.org/wikipedia/commons/9/9e/UbuntuCoF.svg" },
-  { name: "TypeScript",logo:"../public/typescript.svg" },
-  { name: "Generative AI" ,logo:"../public/ai1.png" },
+  { name: "TypeScript",logo:"/typescript.svg" },
+  { name: "Generative AI" ,logo:"/ai1.png" },
 ];
 
 const Hero = () => {
