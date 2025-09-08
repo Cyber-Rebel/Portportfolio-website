@@ -8,10 +8,10 @@ export default function CaseStudyCard() {
       {/* Gradient Background */}
     <img   src="image.png" alt="" />
       {/* Black Gradient Overlay (Bottom Fade Effect) */}
-      <div  data-cursor="View Project" name='projectsection' className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
+      <div  data-cursor="View Project"  name='View Project' className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
 
       {/* Content */}
-      <div data-cursor="View Project" className="absolute  flex  justify-center gap-17 items-end  bottom-6 left-6 text-left text-white">
+      <div data-cursor="View Project"  className="absolute  flex  justify-center gap-17 items-end  bottom-6 left-6 text-left text-white">
         <div>
         <span className="px-3 py-1 text-xs font-bold bg-blue-600 rounded-md">
            Explore Project

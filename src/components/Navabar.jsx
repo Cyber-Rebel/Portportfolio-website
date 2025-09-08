@@ -7,12 +7,39 @@ import { Link } from 'react-router-dom'
 const Navabar = () => {
      const audioRef = useRef(null);// ref system matlab div kaa pura aceess milgta hae 
      const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+     const [show,setshow] = useState(false)
   return (
     <nav className=" bg-[#121314] flex items-center z-50 justify-between px-4 md:px-8 py-6 relative">
       {/* Logo Section */}
       <div className="flex items-center gap-2">
-        <div className="w-6 h-6 bg-[#A9927D] rounded-full"></div>
+        <div 
+          onMouseEnter={() => setshow(true)} 
+          onMouseLeave={() => setshow(false)} 
+          className="relative cursor-pointer"
+        >
+          {/* Circle that transforms to square */}
+          <div className={`w-6 h-6 bg-[#A9927D] transition-all duration-300 ease-in-out 
+            ${show ? 'rounded-md scale-110' : 'rounded-full'}`}>
+            {/* Wave hand emoji only visible in circle state */}
+            {!show && <span className="absolute inset-0 flex items-center justify-center text-xs"></span>}
+          </div>
+
+          {/* Popup card */}
+          {show && (
+            <div 
+              className="absolute top-8 left-0 w-64 bg-[#A9927D] rounded-lg p-4 shadow-lg z-50
+                transform origin-top-left transition-all duration-300 ease-out"
+              style={{animation: 'fadeInScale 0.3s ease-out forwards'}}
+            >
+              <div className="space-y-2 text-left">
+                <p className="font-bold text-white">Hello 👋</p>
+                <p className="text-sm text-white leading-tight">
+                  Thanks for visiting my Portfolio website! If you like what you see and you need me to work on a product, send me a message
+                </p>
+              </div>
+            </div>
+          )}
+        </div>
         <Link to="/" className="font-semibold font-[font8] text-sm md:text-base">Nilesh Patil</Link>
         <audio ref={audioRef} src="normalbutton.mp3"/>
       </div>

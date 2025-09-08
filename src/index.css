@@ -63,6 +63,7 @@ p::selection {
 /* Content groups; ensure single line so widths add up exactly */
 .marquee .texts {
   display: flex;
+  
   align-items: center;
   gap: 4rem;
   white-space: nowrap;
@@ -115,4 +116,16 @@ p::selection {
 }@font-face {
   font-family: font3;
   src: url(../public/font3.woff2);
+}
+
+/* Animation for popup tooltip card */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }

@@ -19,13 +19,13 @@ const Hero = () => {
   return (
     <main className="w-full h-screen font-[font9] flex flex-col items-center px-6 text-center relative overflow-hidden">
       {/* Heading */}
-      <motion.h1
+      <motion.h1 
         className="w-full text-4xl md:text-8xl lg:text-8xl font-bold md:mt-18 text-left pl-[5%]"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        Hello, I’m Nilesh Patil !
+       <span data-cursor="textss" > Hello, I’m Nilesh Patil !</span>
       </motion.h1>
 
       {/* 3D Model (Spline) */}
@@ -52,7 +52,7 @@ const Hero = () => {
       </div>
 
       {/* Bottom Tags */}
-      <section className="absolute bottom-[10%] md:bottom-[8%] px-6 py-4 rounded-lg shadow-lg w-full hidden md:block">
+      <section className="   py-14 rounded-lg shadow-lg w-full  md:py-30  md:block">
         <div className="w-full relative h-12 marquee-container">
           <div className="marquee text-white flex gap-10 font-semibold text-sm md:text-lg">
             {/* Map loop */}
@@ -84,14 +84,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-
-  // {/* Robot Effect use spline */}
-  //  {/* <iframe  className='w-[150%] overflow-x-hidden min-h-96 ' src="https://app.spline.design/file/0a5b1f17-42b1-44f6-9d1f-833dfac38597?view=preview" frameborder="0"></iframe> we can use ths also */}
-  //  <di className='w-[70% ] overflow-x-hidden min-h-96 ' > px-3 py-1 rounded-xl
-
-  //     <Spline  
-  //             scene="https://prod.spline.design/SGNca2ikt67k048p/scene.splinecode" 
-  //       />
-  //  </di>
-

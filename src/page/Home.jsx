@@ -6,8 +6,16 @@ import AboutIntro from '../components/AboutIntro.jsx'
 import Introsection from '../components/Introsection.jsx'
 import Footer from '../components/Footer.jsx'
 import MouseFollower from '../components/MouserFollwer.jsx'
+import FlowingMenu from '../components/Combinatio.jsx'
 
 const Home = () => {
+
+const demoItems = [
+  { link: '#', text: 'Project', image: 'https://picsum.photos/600/400?random=1' },
+  { link: '#', text: 'Github', image: 'https://picsum.photos/600/400?random=2' },
+  { link: '#', text: 'About', image: 'https://picsum.photos/600/400?random=3' },
+];
+
  
 
   return (
@@ -23,6 +31,10 @@ const Home = () => {
 </div>
 
 <Introsection/>
+
+<div className='w-full h-[300px]  ' >
+  <FlowingMenu items={demoItems} />
+</div>
 <Footer/>
 <MouseFollower/>  
 
